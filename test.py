@@ -29,7 +29,7 @@ freq1 = 1000.0
 freq2 = 2000.0
 
 # Obliczenie sygnału x(t) w dyskretnych punktach t_n
-x_t = np.sin(2 * np.pi * freq1 * t_n) + 0.5 * np.sin(2 * np.pi * freq2 * t_n)
+x_t = np.sin(2 * np.pi * freq1 * t_n) + 0.5 * np.sin(2 * np.pi * freq2 * t_n + 3 * np.pi/4 )
 
 # Obliczenie DFT
 X_m_mag, X_m_phi = calculate_dft(x_t, N)
