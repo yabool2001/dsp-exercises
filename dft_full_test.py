@@ -45,7 +45,7 @@ freq2 = 2000.0
 x_t = np.sin(2 * np.pi * freq1 * t_n)
 
 # Obliczenie DFT
-X_m = dft ( x_t , 8000 , N )
+X_m = dft ( x_t , f_s , N )
 
 # Wyświetlenie wyników
 print ( f"{X_m=}")
@@ -55,9 +55,11 @@ plt.figure ( figsize = ( 10 , 5 ) )
 plt.subplot ( 211 )
 plt.stem ( X_m[ : , 0 ] , X_m[ : , 1 ] , 'b' ,  markerfmt = " " , basefmt = "-b" )
 plt.ylabel ( 'Magnitude of X(m) |X(freq)|' )
+plt.grid ( True )
 
 plt.subplot ( 212 )
 plt.stem ( X_m[ : , 0 ] , X_m[ : , 2 ] , 'b', markerfmt = " ", basefmt = "-b" )
 plt.xlabel ( 'Freq (Hz)' )
 plt.ylabel ( 'Phase Angle of X(m) Xphi(freq)' )
+plt.grid ( True )
 plt.show ()

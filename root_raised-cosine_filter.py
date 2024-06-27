@@ -5,8 +5,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy import signal
 
-num_symbols = 10
-sps = 8
+# num_symbols = 10
+num_symbols = 20
+# sps = 8
+sps = 16
 bits = np.random.randint ( 0 , 2 , num_symbols ) # Our data to be transmitted, 1
 
 x = np.array ( [] )
@@ -21,7 +23,7 @@ plt.show ()
 
 # bits:[0,1,1,1,1,0,0,0,1,1]
 # BPSK symbols:[-1,1,1,1,1,-1,-1,-1,1,1]
-# Nie jestem pewny czy to dobrze jest, bo sam robiłem z przyciętego PDF domyślając się : Applying 8 samples per symbol : [-1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0]
+# Applying 8 samples per symbol : [-1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0]
 
 # Create our raised-cosine filter
 num_taps = 101

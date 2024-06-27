@@ -43,7 +43,7 @@ freq2 = 2000.0
 x_t = np.sin(2 * np.pi * freq1 * t_n) + 0.5 * np.sin(2 * np.pi * freq2 * t_n + ((3/4) * np.pi) )
 
 # Obliczenie DFT
-X_m = dft ( x_t , 8000 , N )
+X_m = dft ( x_t , f_s , N )
 
 # Wyświetlenie wyników
 print ( f"{X_m=}")
