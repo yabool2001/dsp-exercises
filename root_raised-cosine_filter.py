@@ -1,5 +1,7 @@
 # Zaczerpnięte z podręcznika z rozdz. "15 Pulse Shaping" podręcznika:
 # "PySDR: A Guide to SDR and DSP using Python"
+# https://pysdr.org/content/pulse_shaping.html
+
 
 import numpy as np
 import matplotlib.pyplot as plt
