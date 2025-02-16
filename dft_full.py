@@ -5,12 +5,9 @@ def dft ( x_t , f_s , N , threshold = 1e-10 ) :
     # Historia utworzenia funkcji https://chatgpt.com/share/e7a46f16-564f-4490-b71f-466276daa8bb
     # x_t: próbki sygnału w dziedzinie czasu
     # N: liczba próbek w sygnale
-    half_N = N // 2 + 1  # Liczba elementów do analizy dla obu przypadków
-    # X_m_mag = np.zeros ( half_N )  # Amplitudy w dziedzinie częstotliwości
-    # X_m_phi = np.zeros ( half_N )  # Fazy w dziedzinie częstotliwości
-    result = np.zeros ( ( half_N , 3 ) )  # Kolumny: częstotliwość, amplituda, faza
+    result = np.zeros ( ( N , 3 ) )  # Kolumny: częstotliwość, amplituda, faza
 
-    for m in range ( half_N ) :
+    for m in range ( N ) :
         X_m_freq = m * f_s / N
         X_m = 0j  # Inicjalizacja składowej częstotliwości jako liczby zespolonej
         for n in range ( N ) :
